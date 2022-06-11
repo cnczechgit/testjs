@@ -1,19 +1,22 @@
-const recordVideoOne = new Promise((resolve, reject)=> {
+
+
+var recordVideoOne = new Promise(function (resolve, reject) {
+    'use strict';
     resolve('Video 1 Recorded');
-})
+});
 
-const recordVideoTwo = new Promise((resolve, reject)=> {
+var recordVideoTwo = new Promise((resolve, reject)=> {
     resolve('Video 2 Recorded');
-})
+});
 
-const recordVideoThree = new Promise((resolve, reject)=> {
+var recordVideoThree = new Promise((resolve, reject)=> {
     resolve('Video 3 Recorded')
-})
+});
 
 Promise.race([
     recordVideoOne,
     recordVideoTwo,
     recordVideoThree
 ]).then((message) => {
-    console.log(message)
+    console.log(message);
 })
