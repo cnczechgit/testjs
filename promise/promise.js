@@ -1,4 +1,4 @@
-
+//Kommentare
 
 var recordVideoOne = new Promise(function (resolve, reject) {
     'use strict';
